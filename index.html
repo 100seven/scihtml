@@ -86,6 +86,18 @@
             color: #767171;
             text-align: center
         }
+        .good{
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+            object-fit: cover;
+        }
+        .goodimg{
+            width: 1080px;
+            height: 810px;
+        }
+        
+        
 /*        ---------------------------------------------------------------------*/
             .mySlides {
                 display: none;
@@ -101,8 +113,9 @@
                 position: relative;
                 margin: auto;
                 width: 800px;
-                height: 450px;
+                height: 450px;    
             }
+            
             .slide-prev, .slide-next {
                 cursor: pointer;
                 position: absolute;
@@ -199,6 +212,17 @@
             -webkit-animation-name: fadeIn; 
             animation-name: fadeIn; 
         }
+        @media (min-width: 320px) and (max-width: 1080px) {
+            .slideshow-container {
+                width: 400px;
+                height: 225px;    
+            }
+            .goodimg{
+            width: 540px;
+            height: 405px;
+            }
+
+        }
     </style>
     <script>
         var slideIndex = 1;
@@ -255,11 +279,7 @@
 
         <div class="mySlides animated">
             <div class="slide-number">3/5</div>
-<<<<<<< HEAD
             <img src="https://user-images.githubusercontent.com/76203690/120975079-ce55da00-c7ab-11eb-8052-c6444a9d66fa.jpg">
-=======
-            <img src="(https://user-images.githubusercontent.com/76203690/120975079-ce55da00-c7ab-11eb-8052-c6444a9d66fa.jpg">
->>>>>>> 3505fbb8b2334f25b5e6bc23eafc0bec682156cb
             <div class="slide-text">image 3</div>
         </div>
 
@@ -287,7 +307,7 @@
             <span class="slide-dot" onclick="currentSlide(5)"></span>
         </div>
         <h1 class="future">다양한 활동을 동한 자기계발과 성장</h1>
-        <div class="future"><img src="https://user-images.githubusercontent.com/76203690/120975425-2d1b5380-c7ac-11eb-8f4e-294c1cef5585.jpg" alt="GOOD" width="1080" height="810"></div>
+        <div class="future good"><img class="goodimg" src="https://user-images.githubusercontent.com/76203690/120975425-2d1b5380-c7ac-11eb-8f4e-294c1cef5585.jpg" alt=""></div>
         <h1 class="future">추후 업데이트 예정입니다</h1>
         <h1 class="future">Coming Soon...</h1>
         
