@@ -19,35 +19,26 @@
         }
         .nav{
             float: left;
+            text-decoration: none;
+            margin-right: 10px;    
+            margin-left: 40px;
+            background-color: transparent;
+            font-family: 'Hanna', sans-serif;
+            font-size: 30px;
         }
         .navbar{
-            display: flex;
-            justify-content: space-between;
+            margin-top: auto;
+            margin-bottom: auto;
         }
-        .logoh1{
-                display: inline-block;
-                vertical-align: middle;
-                margin: 0.5rem;
-                padding: 0;
-                letter-spacing: 2px;
-            }
         ul{
             display: flex;
             list-style: none;
             margin: 10px;
             padding: 0;
             margin-top: 0.6rem;
-            
-        }
-        .nav{
-            text-decoration: none;
-            padding: 15px 20px 15px 20px;
-            background-color: #D7A0E0;
-            font-family: 'Hanna', sans-serif;
-            
         }
         .nav:hover{
-            background-color: #F4E5F7;
+            color: black;
         }
         .nav:active{
             color: #000000;
@@ -55,11 +46,18 @@
         header{
             background-color: #E4C0EA;
         }
+        .logoh1{
+            letter-spacing: 2px;
+            font-size: 45px;
+            margin: 0;
+        }
         .logo{
             text-decoration: none;
             font-family: 'Hanna', sans-serif;
-            margin-left: 10px;
+            margin-left: 30px;
             color: mediumpurple;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
         .logo:hover{
             color: darkblue;
@@ -212,6 +210,37 @@
             -webkit-animation-name: fadeIn; 
             animation-name: fadeIn; 
         }
+        .dropdown-button {
+			background-color: transparent;
+			padding: 8px;
+			font-size: 20px;
+			border: none;
+            font-family: 'Hanna', sans-serif;
+		}
+		.dropdown {
+			position: relative;
+			display: inline-block;
+            margin-top:auto;
+            margin-bottom:auto;
+            margin-right:10px;
+		}
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #D5B0DE;
+			min-width: 75px;
+			padding: 5px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		}
+		.dropdown-content a {
+			color: black;
+			padding: 8px;
+			text-decoration: none;
+			display: block;
+		}
+		.dropdown-content a:hover { background-color: transparent; }
+		.dropdown:hover .dropdown-content { display: block; }
+		.dropdown:hover .dropdown-button { background-color: transparent; }
         @media (min-width: 320px) and (max-width: 1080px) {
             .slideshow-container {
                 width: 330px;
@@ -221,7 +250,28 @@
             width: 330px;
             height: 247.5px;
             }
-
+            .logoh1{
+            font-size: 26px;
+            }
+            .logo{
+                margin-left: 10px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+            .nav{
+                font-size: 20px;
+                margin-right: 5px;    
+                margin-left: 10px;
+            }
+            ul{
+                display: none;
+            }
+            
+        }
+        @media (min-width: 1080px){
+            .dropdown{
+                display: none;
+            }
         }
     </style>
     <script>
@@ -253,13 +303,22 @@
 </head>
 <body>
     <header>
-        <h1 class="logoh1"><a href="" class="logo">인천효성중 SCILAB</a></h1>
-        <ul>
+        <a href="" class="logo"><h1 class="logoh1">인천효성중 SCILAB</h1></a>
+        <ul class="navbar">
             <li><a href="" class="nav">소개</a></li>
             <li><a href="" class="nav">활동</a></li>
             <li><a href="" class="nav">사진첩</a></li>
             <li><a href="" class="nav">오시는길</a></li>
         </ul>
+        <div class="dropdown">
+            <button class="dropdown-button">MENU</button>
+            <div class="dropdown-content">
+                <a href="#">소개</a>
+                <a href="#">활동</a>
+                <a href="#">사진첩</a>
+                <a href="#">오시는길</a>
+            </div>
+        </div>
     </header>
     <main>
         <h1 class="future animated fadeIn">미래를 위한 인재 양성<br>인천효성중 SCILAB에서 시작합니다</h1>
